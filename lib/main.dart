@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:laravel_reverb/pusher_app.dart';
 import 'package:pusher_reverb_flutter/pusher_reverb_flutter.dart';
 
 void main() {
-  runApp(const PusherApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -75,7 +74,8 @@ class _MyAppState extends State<MyApp> {
 
       // Callback fired when attempting to reconnect after connection loss
       onReconnecting: () {
-        print('Connection lost. Reconnecting...');
+        print('Connection lost. Reconnecting...');;
+        subscribe();
         // Update UI to show reconnecting status
       },
 
